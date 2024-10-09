@@ -8,46 +8,46 @@ Created on Mon Sep 30 14:41:01 2024
 #File Management
 #write mode("w"): It is creating the file in givin' path but it is deleting the content of the file then adding the new info. 
 
-#file=open("newfile.txt","w",encoding="utf-8") 
-#print(file)
+file=open("newfile.txt","w",encoding="utf-8") 
+print(file)
 #closing the file: It is a necessary action otherwise it will use our resources.
-#file.close()
-#We can create a file whereever the place that we want, we need to give the path
-#filee= ("C:/users/Ede Rojin DELİBAŞ/.py/BTKAkademiUyg/new.txt","w")
-#file.write("How do you feel about coding right now?")
+file.close()
+#We can create a file in any place that we want, we need to give the path
+filee= ("C:/users/Ede Rojin DELİBAŞ/.py/BTKAkademiUyg/new.txt","w")
+file.write("How do you feel about coding right now?")
 #Reading a file
 #The method read() also can take a parameter called size which means the character number,It's actually the bit number
 #Every character is a bit
 #The function readline() shows us just one row on program
 #The function readlines() shows the characters inside of an array.
-# newFile=open("newfile.txt","r",encoding="utf-8")
+newFile=open("newfile.txt","r",encoding="utf-8")
 
-# for i in newFile:
-#     print(i,end="")
-# newFile.close()
-#using with and closing the otomatically(time of the program is up to syntax next to with)
-# with open("newfile.txt","r",encoding="utf-8") as file:
-#     content=file.read()
-#     print(content)
+for i in newFile:
+    print(i,end="")
+newFile.close()
+#using with and closing otomatically(time of the program is up to syntax next to with)
+with open("newfile.txt","r",encoding="utf-8") as file:
+    content=file.read()
+    print(content)
 #The method tell() gives the position of the cursor
-    # print(file.tell())
+    print(file.tell())
 #Using seek() method we can replace the cursor and go which position we want in the text.
 #Updating the read file
 #r+ it means reading and writing at the same time.
-# with open("newfile.txt","r+",encoding="utf-8") as file:
-#     file.seek(12)
-#     file.write("deneme")
+with open("newfile.txt","r+",encoding="utf-8") as file:
+    file.seek(12)
+    file.write("deneme")
 #updating position=middle of the page
 
-# with open("newfile.txt", "r+",encoding="utf-8") as file:
-#     list=file.readlines()
-#     list.insert(1,"Selen")
-#     file.seek(0) #taking the location to the beginning of the page
-#     file.writelines(list)
-#     for i in list:
-#         file.write(i)
-# with open("newfile.txt","r",encoding="utf-8") as file:
-#     print(file.read())    
+with open("newfile.txt", "r+",encoding="utf-8") as file:
+    list=file.readlines()
+    list.insert(1,"Selen")
+    file.seek(0) #taking the location to the beginning of the page
+    file.writelines(list)
+    for i in list:
+        file.write(i)
+with open("newfile.txt","r",encoding="utf-8") as file:
+    print(file.read())    
 #Note Example
 def calculate_average(rows):
     rows=rows[:-1]#taking the spaces between rows

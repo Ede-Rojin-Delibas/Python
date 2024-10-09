@@ -5,7 +5,7 @@ Created on Sat Jul 20 15:31:36 2024
 @author: Ede Rojin DELİBAŞ
 """
 #OOP-Object Oriented Programmming Codes
-"""class Person:
+class Person:
     pass    #yer tutucu
     #attributes
         #-class seviyesinde attribute (class attributes)tanımlama ve object seviyesinde attributes(object attributes) tanımlama
@@ -29,9 +29,9 @@ Created on Sat Jul 20 15:31:36 2024
 #init methodunun oluşturulmasındaki sebep her obje için mutlaka çalıştırılıyor olması
 #obje tanımı ; obje tanımlandıktan sonra o sınıfın method ve attribute'larını kullanabilir.
 p1=Person('Bay Darcy',1974)
-#p1.intro()
-#print(p1.calculateAge())
-#print(f"name:{p1.name}, year:{p1.year}")
+p1.intro()
+print(p1.calculateAge())
+print(f"name:{p1.name}, year:{p1.year}")
 
 class Circle:
     #class object attribute
@@ -47,7 +47,7 @@ class Circle:
     def alan_hesapla(self):
         return self.pi*(self.yaricap**2)
 c1=Circle(3)
-#print(f'c1 nesnesinin alanı:{c1.alan_hesapla()} ve c1 nesnesinin çevresi:{c1.cevre_hesapla()}')
+print(f'c1 nesnesinin alanı:{c1.alan_hesapla()} ve c1 nesnesinin çevresi:{c1.cevre_hesapla()}')
 #Inheritance(Kalıtım) kavramı
 #Person=>name,lastname, age, eat(),drink(),breathe()
 #student(person),teacher(person)
@@ -75,8 +75,8 @@ t1.who_am_i()
 print(p1.firstname +' '+p1.lastname)
 print(s1.firstname +' '+s1.lastname)
 #objeler üzerinde kullandığımız bazı özel methodlar
-#len methodu class üzerinde direkt olarak kullanılmaz (liste ya da dictionary 
-#de  bir classtır ve onlar üzerinde len methodunu kullanabiliriz. )
+#len methodu class üzerinde direkt olarak kullanılmaz (liste ya da dictionary de  bir classtır 
+#ve onlar üzerinde len methodunu kullanabiliriz. )
 class Movie():
     def __init__(self,title, director,duration):
         self.title=title            #self ile point etme, gösterme işlemi(this()) attributes gösterme 
@@ -159,14 +159,13 @@ class Parrot:
         #class attributes
         name=""
         age=0
-    #create parrot1 object
+#create parrot1 object
 parrot1=Parrot()
 parrot1.name="Ivy"
 parrot1.age=2
 #access attributes
 print(f"My little parrot {parrot1.name} is {parrot1.age} years old.")
-#22.07.2024
-#örnek6:Kapsülleme ya da encapsulation
+#22.07.2024 / örnek6:Kapsülleme(encapsulation)
 class Computer():
     
     def __init__(self):
@@ -273,10 +272,10 @@ class OgretimElemani(UCalisan):
         print(ogrAlan,"alanında çalışmaktadır.")
         super().__init__(ogrAlan)
   
-   # def departman(self,ogrAlan):
-     #   self.ogrAlan=ogrAlan
-     #   ogrAlan=input("Alan:",ogrAlan)
-      #  return ogrAlan
+    def departman(self,ogrAlan):
+        self.ogrAlan=ogrAlan
+        ogrAlan=input("Alan:",ogrAlan)
+        return ogrAlan
     #Another sublass
     
 class Docent(OgretimElemani):
@@ -322,14 +321,14 @@ class Yonetici(Personel):
             unvanKatsayisi=1.25
         maas=(3*asgariUcret)+(asgariUcret*kıdemKatsayısı)+(asgariUcret*unvanKatsayisi)
         return maas
-#nesneler oluşturma Calisan sınıfından
+#Calisan sınıfından nesneler oluşturma 
 personel1=Calisan("Ede Rojin", "Delibaş", "Mühendis", 5)
 personel2=Calisan("Eye Nazdar", "Delibaş", "Üretim Müdürü", 5)
 personel3=Calisan("Ahmet", "Aydın", "İşçi", 8)
-personel1.veriYazdir()  #Neden çalışmadı
+personel1.veriYazdir()  #error
 print(personel1.maasHesapla)
 print()
-print()"""
+print()
 #örnek
 class India():#super class
     def printfile(self):
