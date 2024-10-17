@@ -1079,25 +1079,71 @@ for k in s:
 print("Metindeki boşluk sayısı:",bosluk_sayaci)
 print("Metindeki kelime sayısı:",bosluk_sayaci+1)
 print("Harf sayısı:",len(s))
+#Nested Functions(Encapsulation)
+def outer(num1):
+    print('outer')
+    def inner_increament(num1):
+        print('inner')
+        return num1 + 1
+    num2=inner_increament(num1)
+    print(num1,num2)
+outer(10)
+#factorial example with nested functions
+def factorial(number):
+    if not isinstance(number, int): #isinstance:controls object is in the class 
+        raise TypeError("number must be an integer")
+    if not number>=0:
+        raise ValueError("number must be zero or positive")
+        
+    def inner_factorial(number):
+        if number <=1:
+            return 1
+        return number * inner_factorial(number-1)
+    return inner_factorial(number)
 
+try:
+    print(factorial(3))
+except Exception as ex:
+    print(ex)
+#authentication
+def yetki_sorgulama(page):
+    def inner(role):
+        if role=="Admin":
+            return "{0} rolü {1} sayfasına ulaşabilir.".format(role,page)
+        else:
+            "{0} rolü {1} sayfasına ulaşamaz.".format(role,page)
+    return inner
+user1=yetki_sorgulama("Product Edit")
+print(user1("Admin"))
+#Example
+def islem(islem_adi):
+    def toplama(*args):
+        toplam=0
+        for i in args:
+            toplam+=i
+        return toplam
+    def carpma(*args):
+        carpim=1
+        for i in args:
+            carpim*=i
+        return carpim
+    if islem_adi=="toplama":
+        return toplam
+    else:
+        return carpim
+toplama=islem("toplama")
+print(toplama(1,3,5,23,44))
+carpma=islem("carpma")
+print(carpma(1,2,1))
 
-
-
-
+        
+        
+        
+        
+        
+        
+        
+        
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
 
