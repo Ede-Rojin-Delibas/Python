@@ -25,4 +25,14 @@ This repository includes ***python examples*** by different levels. My aim to cr
     * *Clone the repository* from Github to your local machine. Open a terminal and run the following command:
     ```bash
     git clone https://github.com/Ede-Rojin-Delibas/Python.git
+    ```
+    * Navigate to the project folder:
+    ```bash 
+    cd your-python-repository
+    ```
+* **Install Dependecies**
+    * They are some package/Modules that they need to install to run the project.
+        * For instance math, datetime
+        
+
 

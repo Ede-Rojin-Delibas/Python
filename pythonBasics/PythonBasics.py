@@ -1135,15 +1135,136 @@ toplama=islem("toplama")
 print(toplama(1,3,5,23,44))
 carpma=islem("carpma")
 print(carpma(1,2,1))
+#Givin functions as a parameter
+def toplama(a,b):
+    return a+b
+def cikarma(a,b):
+    return a-b
+def carpma(a,b):
+    return a*b
+def bolme(a,b):
+    return a/b
+def islem(f1,f2,f3,f4,islem_adi):
+    if islem_adi=="toplama":
+        print(f1(2,3))
+    elif islem_adi=="cikarma":
+        print(f2(3,8))
+    elif islem_adi=="carpma":
+        print(f3(4,9))
+    elif islem_adi=="bolme":
+        print(f4(8,6))
+    else:
+        print("geçersiz işlem")
+islem(toplama,cikarma,carpma,bolme, "bolme")
+#Decorators
+def my_decorator(func):
+    def wrapper(name):
+        print("fonksiyondan önceki işlemler")
+        func(name)
+        print("fonksiyondan sonraki işlemler")
+    return wrapper()
+@my_decorator()
+def sayHello(name):
+    print("Hello",name)
+#we can use @decorator_name instead of this usage
+# sayHello=my_decorator(sayHello)
+# sayHello()
+import math 
+import time
+def usalma(a,b):
+    start = time.time()
+    time.sleep(1)
+    print(math.pow(a, b))
+    finish=time.time()
+    print("Fonksiyon"+ str(finish-start) + "saniye sürdü.")
+def faktoriyel(num):
+    start = time.time()
+    time.sleep(1)
+    print(math.factorial(num))
+    finish=time.time()
+    print("Fonksiyon"+ str(finish-start) + "saniye sürdü.")
+usalma(4,3)
+#creating a decorator for this example
+#A decorator takes in a function, adds some functionality and returns it.
+def calculate_time(func):
+    def inner(*args, **kwargs):
+        start = time.time()
+        time.sleep(1)
+        func(*args, **kwargs)
+        finish=time.time()
+        print("Fonksiyon"+ fun.__name__ + str(finish-start) + "saniye sürdü.")
+    return inner
+@calculate_time    
+def usalma(a,b):
+     print(math.pow(a, b))
+@calculate_time
+def faktoriyel(num):       
+    print(math.factorial(num)) 
+faktoriyel(7)
+#Example-1 (This examples from programiz.com)
+def smart_divide(func):
+    def inner(a,b):
+        print("I am going to divide",a,"and", b)
+        if b==0:
+            print("Whoops! Cannot divide")
+            return
+        return func(a,b)
+    return inner
+@smart_divide
+def divide(a,b):
+    return a/b
+divide(200,5)
+#Example-2 
+def star(func):
+    def inner(*args,**kwargs):
+        print("*" * 15)
+        func(*args, **kwargs)
+        print("*" * 15)
+    return inner 
+def percent(func):
+    def inner(*args, **kwargs):
+        print("%" * 15)
+        func(*args, **kwargs)
+        print("%" * 15)
+    return inner
+@star
+@percent
+def printer(msg):
+    print(msg)
+printer("EDE")
+#The above syntax of is equaivalent to 
+def printer(msg):
+    print(msg)
+printer=star(percent(printer))
+#Iterators(scenerio behind the loop for)
+liste_iter=[88,52,75,96]
+iterator=iter(liste_iter)
+print(next(iterator))
+while True:
+    try:
+        elemet=iter(liste_iter)
+        print(elemet)
+    except StopIteration:
+        break
+#List comprehension
 
-        
-        
-        
-        
-        
-        
-        
-        
     
-            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
