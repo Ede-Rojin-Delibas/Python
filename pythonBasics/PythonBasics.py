@@ -1,4 +1,4 @@
-names = ['ali', 'ayse','suna','melis','kemal']
+"""names = ['ali', 'ayse','suna','melis','kemal']
 years= [1998,1987,1994,1995,1999]
 #1-cenk ismini listenin sonuna ekleme
 names.append('cenk')
@@ -155,12 +155,12 @@ print(x,y,z)
 print(x,y,z[0])
 #uygulama
 """
-1-kullanıcıdan aldığınız 2 sayının çarpımı ile x,y,z toplamının farkı nedir?
-2- y'nin x'e kalansız bölümü nedir?
-3-(x,y,z) toplamının mod 3'ü nedir?
-4-y'nin x. kuvvetini hesaplayınız.
-5-x,*y,z=numbers işlemine göre z'nin küpü kaçtır?
-6-x,*y,z=numbers işlemine göre y'nin değerleri toplamı kaçtır?
+#1-kullanıcıdan aldığınız 2 sayının çarpımı ile x,y,z toplamının farkı nedir?
+#2- y'nin x'e kalansız bölümü nedir?
+#3-(x,y,z) toplamının mod 3'ü nedir?
+#4-y'nin x. kuvvetini hesaplayınız.
+#5-x,*y,z=numbers işlemine göre z'nin küpü kaçtır?
+#6-x,*y,z=numbers işlemine göre y'nin değerleri toplamı kaçtır?
 """
 #1.soru
 x,y,z=10,20,3
@@ -301,13 +301,14 @@ if yas>=18:
 else:
     print("Ehliyet için yaş sınırını geçemediniz")
 #2-soru:Bir öğrencinin 2 yazılı bir sözlü notu alıp hesaplanan ortalamaya göre not aralığına karşılık gelen not bilgisini yazdırınız.
+"""
 """0-24=>0
    25-44=>1
    45-54=>2
    55-69=>3
    70-84=>4
    85-100=>5"""
-
+"""
 yazili1= int(input("1.yazılı notunuz: "))
 yazili2=int(input("2.yazili notunuz: "))
 sozlu=int(input("Sözlü notunuz: "))
@@ -427,11 +428,11 @@ boy=float(input("Boyunuz:"))
 kilo=float(input("Kilonuz:"))
 bki=kilo/(boy**2)
 
-#tabloya göre kişi hangi gruba girmektedir 
+#tabloya göre kişi hangi gruba girmektedir """
 """0-18.4=>zayıf
    18.5-24.9=>normal
    25.0- 29.9=>fazla kilolu
-   30.0-34.9=>şişman(obez)"""
+   30.0-34.9=>şişman(obez)
    
 if bki>=0 and bki<=18.4:
     print(f'Kişinin bilgilerine göre kişinin bki:{bki} dir ve kişi zayıftır.')
@@ -1235,7 +1236,7 @@ printer("EDE")
 #The above syntax of is equaivalent to 
 def printer(msg):
     print(msg)
-printer=star(percent(printer))
+printer=star(percent(printer))"""
 #Iterators(scenerio behind the loop for)
 liste_iter=[88,52,75,96]
 iterator=iter(liste_iter)
