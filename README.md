@@ -16,6 +16,7 @@ This repository includes ***python examples*** by different levels. My aim to cr
  - Iterators
  - generators 
  - Advanced Modules & Web Scrapping
+ - Image Processing
  ## Repository Status
  Currently in beta version; new features are being added.
  ## How to Build

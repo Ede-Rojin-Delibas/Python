@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import pandas as pd
 
-#Example-h: This example captures an image while turning on the camera
+#Example-1: This example captures an image while turning on the camera
 
 import cv2
 

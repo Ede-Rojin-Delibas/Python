@@ -7,11 +7,11 @@ import image
 import cv2
 import matplotlib.pyplot as plt
 
-#image= cv2.imread('1.jpg')  #capturing the img
-#image= cv2.imread('1.jpg',cv2.IMREAD_GRAYSCALE) #It is return the image in grey.
-#image= cv2.imread('1.jpg',0) #Same
-#cv2.imshow('Profile',image)
-#cv2.waitKey(0)  #It is wait for the input(data) from keyboard
+image= cv2.imread('1.jpg')  #capturing the img
+image= cv2.imread('1.jpg',cv2.IMREAD_GRAYSCALE) #It is return the image in grey.
+image= cv2.imread('1.jpg',0) #Same
+cv2.imshow('Profile',image)
+cv2.waitKey(0)  #It is wait for the input(data) from keyboard
 kInp=cv2.waitKey(0)  #It is usually used for videos
 if kInp == 65:
     print('Klavyeden büyük A harfine basıldı.')
@@ -24,8 +24,8 @@ if kInp == ord('a'):
 else:
     print('Klavyeden başka bir harfe basıldı. ')
 cv2.destroyAllWindows()
-#image= cv2.imread('1.jpg')
-#cv2.imwrite('5.png',image)  #This process works to saving or writing the images
+image= cv2.imread('1.jpg')
+cv2.imwrite('5.png',image)  #This process works to saving or writing the images
 #Turn on the camera
 video=cv2.VideoCapture(0)  #This object is belongs to computer.We will take frames and than show this frames in the screen using loops
 while True:
@@ -59,11 +59,11 @@ result.release()
 cv2.destroyAllWindows()
 #Picture Features
 
-#image =cv2.imread('1.jpg')
+image =cv2.imread('1.jpg')
 #Using item we can capture the color value of any pixel in the image at any point.
 #Using imread() when we read the image, we will read the image in BGR format
-#print('Blue:', image.item(10,10,0))
-#print(image[300,200])
+print('Blue:', image.item(10,10,0))
+print(image[300,200])
 #itemset is using for changing the image's value in any point.
 image.itemset(10,10,2,0)
 cv2.imshow('resim',image)
@@ -75,9 +75,9 @@ cv2.destroyAllWindows()
 #shape is help us to see the sizes of our image
 print(image.shape)
 #size shows the number of piksels (or the minus value of y , x and c)
-#print(image.size)
+print(image.size)
 #datatype
-#print(image.dtype) -> uint8
+print(image.dtype) #-> uint8
 #ROI taking a piece from image
 #roi=[y1:y2,x1:x2]
 roi=image[154 : 190 , 126 : 180]
@@ -134,8 +134,8 @@ cv2.imshow('sized',imageResized)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 #Cropping(ROI)
-#cropped=image[0:200,0:150]
-#cv2.imshow('cropped',cropped)
+cropped=image[0:200,0:150]
+cv2.imshow('cropped',cropped)
 #Dividing the picture into parts and combining them (for instance into 4 parts)
 y,x,c=image.shape
 cropped=image[0:y//2,0:x//2]
